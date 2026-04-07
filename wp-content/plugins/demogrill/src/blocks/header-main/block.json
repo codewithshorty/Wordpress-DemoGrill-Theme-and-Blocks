@@ -1,0 +1,69 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "demogrill/header-main",
+    "title": "DemoGrill Header Main",
+    "icon": "cover-image",
+    "description": "Main Header block in DemoGrill Project.",
+    "category":"media",
+    "keywords": [ "header", "wide", "fancy" ],
+    "version": "1",
+    "textdomain": "demogrill",
+    "editorScript":"file:./index.js",
+    "style": "file:./index.css",
+    "attributes": {
+        "title":{
+            "type":"string",
+            "source": "html",
+            "selector": "h1"
+        },
+        "titleSize":{
+            "type":"number",
+            "default": 48
+        },
+        "subtitle":{
+            "type":"string",
+            "source": "html",
+            "selector": "h2"
+        },
+        "headImg":{
+            "type": "string"
+        },
+        "btnText":{
+            "type":"string",
+            "default": "Click Button"
+        },
+        "buttonBgColor": {
+            "type": "string",
+            "default": "#cc8f15"
+        },
+        "buttonTextColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "buttonRadius": {
+            "type": "number",
+            "default": 5
+        },
+        "textColor":{
+            "type":"string",
+            "default": "#000000"
+        },
+        "heroOverlay":{
+            "type":"number",
+            "default": 0.3
+        },
+        "heroPadding":{
+            "type":"number",
+            "default":"50"
+        },
+        "heroTextAlign":{
+            "type":"string",
+            "default":"left"
+        },
+        "heroButtonUrl":{
+            "type":"string",
+            "default":""
+        }
+    }
+}
