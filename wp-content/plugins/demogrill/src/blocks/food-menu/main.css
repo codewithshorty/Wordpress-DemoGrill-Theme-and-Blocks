@@ -1,5 +1,4 @@
 .food-menu {
-    max-width: 800px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -10,7 +9,14 @@
     padding: 10px;
     box-sizing: border-box;
     flex: 0 0 33%;
+    position: relative;
+    height: 400px;
 }
+
+.food-menu__item:hover .food-image img {
+        filter: brightness(1.25);
+}
+
 
 .food-menu__header {
     display: flex;
@@ -23,7 +29,6 @@
     margin: 10px 0;
     /* font-size: 20px; */
     font-weight: bold;
-    height: 50px;
 }
 
 .food-menu__header span {
@@ -35,7 +40,6 @@
     margin: 5px 0;
     color: #666;
     font-size: 12px;
-    height: 70px;
 }
 
 .food-menu__item .food-category {
@@ -46,24 +50,43 @@
     font-size: 12px;
     font-weight: bold;
     border-radius: 5px;
-    margin-bottom: 5px;
+    position: absolute;
+    bottom: 10px;
 }
 
 .food-menu__item .food-image img {
     border-radius: 20px;
-    width: 100%;
+    width: 100% !important;
+    height: auto !important;
     transition: all 0.25s;
 }
 
-.food-menu__item .food-image img:hover{
-    filter: brightness(1.25);
-}
+
 
 .food-menu__filter {
     width: 100%;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: end;
 }
 
 .food-menu__filter button {
-    margin-right: 5px;
+    margin-right: 10px;
+    background-color: antiquewhite;
+    color: #666;
+    border: none;
+    padding: 4px 8px;
+    transition: 0.3s ease-in;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+
+.food-menu__filter button:hover{
+    transform: scale(1.1);
+}
+
+.food-menu__filter button.active {
+background-color: #ff6600;
+color: #FFFFFF;
 }

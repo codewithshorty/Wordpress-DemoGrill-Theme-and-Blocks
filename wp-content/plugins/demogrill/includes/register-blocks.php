@@ -5,7 +5,8 @@ function demogrill_registering_block()
     $blocks = [
         ["name" => "header-simple"],
         ["name" => "header-main"],
-        ["name" => "food-menu"]
+        ["name" => "food-menu"],
+        ["name" => "reservation-form"]
     ];
 
     foreach ($blocks as $block) {

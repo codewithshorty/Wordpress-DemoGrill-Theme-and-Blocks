@@ -13,8 +13,9 @@
   "version": "1",
   "textdomain": "demogrill",
   "editorScript": "file:./index.js",
-  "viewScript": "file:/frontend.js",
+  "viewScript": "file:/view.js",
   "style": "file:./index.css",
+  "render": "file:./render-food-menu.php",
   "attributes": {
     "menuItems": {
       "type": "array",

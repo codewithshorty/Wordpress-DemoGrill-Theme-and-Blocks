@@ -1,0 +1,18 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "demogrill/reservation-form",
+  "title": "DemoGrill Reservation Form.",
+  "icon": "forms",
+  "description": "Reservation Form block in DemoGrill Project.",
+  "category": "text",
+  "keywords": [
+    "form",
+    "reservation"
+  ],
+  "version": "1",
+  "textdomain": "demogrill",
+  "editorScript": "file:./index.js",
+  "style": "file:./index.css",
+  "render": "file:./render-form.php"
+}

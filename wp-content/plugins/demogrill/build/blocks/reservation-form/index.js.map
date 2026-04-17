@@ -1,0 +1,1 @@
+{"version":3,"file":"blocks/reservation-form/index.js","mappings":";;;;AAAAA,OAAO,CAACC,GAAG,CAAC,uBAAuB,CAAC,C","sources":["webpack://demogrill/./src/blocks/reservation-form/index.js"],"sourcesContent":["console.log(\"form reservarion blok\");"],"names":["console","log"],"sourceRoot":""}

@@ -22,6 +22,8 @@ define("DEMOGRILL_DIR", plugin_dir_path(__FILE__));
 
 // Includes
 include(DEMOGRILL_DIR . "includes/register-blocks.php");
+include(DEMOGRILL_DIR . "includes/register-cpt.php");
+
 
 // Hooks
 add_action("init", "demogrill_registering_block");

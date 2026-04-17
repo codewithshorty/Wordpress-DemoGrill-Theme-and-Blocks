@@ -2,6 +2,92 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/blocks/food-menu/edit.js"
+/*!**************************************!*\
+  !*** ./src/blocks/food-menu/edit.js ***!
+  \**************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Edit)
+/* harmony export */ });
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./main.css */ "./src/blocks/food-menu/main.css");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+function Edit() {
+  {
+    const foodMenuItems = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(select => {
+      return select("core").getEntityRecords("postType", "food_menu_item", {
+        per_page: -1,
+        _embed: true
+      });
+    }, []);
+    console.log(foodMenuItems);
+    if (!foodMenuItems) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+        children: "Loading items..."
+      });
+    }
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      ..._wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h2", {
+        children: "Food Menu Items"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "food-menu",
+        children: foodMenuItems.map(item => {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+            className: "food-menu__item",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+              className: "food-image",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
+                src: item?._embedded?.["wp:featuredmedia"]?.[0]?.source_url,
+                alt: item?._embedded?.["wp:featuredmedia"]?.[0]?.alt_text
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+              className: "food-menu__header",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h4", {
+                children: item.title.rendered
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+              children: item.content.rendered
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+              class: "food-category",
+              children: item?._embedded?.["wp:term"]?.[0]?.[0]?.slug
+            })]
+          }, item.id);
+        })
+      })]
+    });
+  }
+}
+
+/***/ },
+
+/***/ "./src/blocks/food-menu/save.js"
+/*!**************************************!*\
+  !*** ./src/blocks/food-menu/save.js ***!
+  \**************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ save)
+/* harmony export */ });
+function save() {
+  return null;
+}
+
+/***/ },
+
 /***/ "./src/blocks/food-menu/main.css"
 /*!***************************************!*\
   !*** ./src/blocks/food-menu/main.css ***!
@@ -44,13 +130,13 @@ module.exports = window["wp"]["blocks"];
 
 /***/ },
 
-/***/ "@wordpress/components"
-/*!************************************!*\
-  !*** external ["wp","components"] ***!
-  \************************************/
+/***/ "@wordpress/data"
+/*!******************************!*\
+  !*** external ["wp","data"] ***!
+  \******************************/
 (module) {
 
-module.exports = window["wp"]["components"];
+module.exports = window["wp"]["data"];
 
 /***/ },
 
@@ -60,7 +146,7 @@ module.exports = window["wp"]["components"];
   \*****************************************/
 (module) {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"demogrill/food-menu","title":"DemoGrill Food Menu","icon":"food","description":"Food Menu block in DemoGrill Project.","category":"text","keywords":["menu","food"],"version":"1","textdomain":"demogrill","editorScript":"file:./index.js","viewScript":"file:/frontend.js","style":"file:./index.css","attributes":{"menuItems":{"type":"array","default":[{"name":"Margherita","price":"5e","description":"Classic pizza with tomato and cheese","image":"","category":"grill"}]}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"demogrill/food-menu","title":"DemoGrill Food Menu","icon":"food","description":"Food Menu block in DemoGrill Project.","category":"text","keywords":["menu","food"],"version":"1","textdomain":"demogrill","editorScript":"file:./index.js","viewScript":"file:/view.js","style":"file:./index.css","render":"file:./render-food-menu.php","attributes":{"menuItems":{"type":"array","default":[{"name":"Margherita","price":"5e","description":"Classic pizza with tomato and cheese","image":"","category":"grill"}]}}}');
 
 /***/ }
 
@@ -147,221 +233,17 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./edit */ "./src/blocks/food-menu/edit.js");
+/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./save */ "./src/blocks/food-menu/save.js");
 /* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./block.json */ "./src/blocks/food-menu/block.json");
-/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./main.css */ "./src/blocks/food-menu/main.css");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__);
-
-
 
 
 
 
 (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_3__.name, {
-  edit({
-    attributes,
-    setAttributes
-  }) {
-    const {
-      menuItems
-    } = attributes;
-    const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)({
-      className: "food-menu"
-    });
-    const addMenuItem = () => {
-      setAttributes({
-        menuItems: [...menuItems, {
-          name: "",
-          price: "",
-          description: ""
-        }]
-      });
-      console.log("item added", menuItems);
-    };
-    const updateMenuItem = (value, index, itemField) => {
-      const newMenuItems = [...menuItems];
-      newMenuItems[index][itemField] = value;
-      setAttributes({
-        menuItems: newMenuItems
-      });
-    };
-    const deleteMenuItem = index => {
-      const newMenuItems = menuItems.filter((_, i) => i !== index);
-      setAttributes({
-        menuItems: newMenuItems
-      });
-    };
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-        ...blockProps,
-        style: {
-          "maxWidth": "800px",
-          "margin": "0 auto",
-          "display": "flex",
-          "flexWrap": "wrap"
-        },
-        children: [menuItems.map((singleItem, index) => {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-            style: {
-              "borderBottom": "1px solid #eee",
-              "padding": "10px",
-              "boxSizing": "border-box",
-              "flex": "0 0 33%"
-            },
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUploadCheck, {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUpload, {
-                onSelect: media => updateMenuItem(media.url, index, "image"),
-                render: ({
-                  open
-                }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
-                  variant: "secondary",
-                  onClick: open,
-                  children: singleItem.image ? "Update Image" : "Select Image"
-                })
-              })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("br", {}), singleItem.image && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-              className: "food-image",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
-                src: singleItem.image,
-                style: {
-                  "borderRadius": "20px",
-                  "width": "100%"
-                }
-              })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
-              label: "Category",
-              value: singleItem.category,
-              options: [{
-                label: "Select Category",
-                value: ""
-              }, {
-                label: "Grill",
-                value: "grill"
-              }, {
-                label: "Pasta",
-                value: "pasta"
-              }, {
-                label: "Pizza",
-                value: "pizza"
-              }, {
-                label: "Salad",
-                value: "salad"
-              }, {
-                label: "Desert",
-                value: "desert"
-              }],
-              onChange: value => updateMenuItem(value, index, "category")
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
-              tagName: "h4",
-              placeholder: "Food name",
-              value: singleItem.name,
-              onChange: value => updateMenuItem(value, index, "name")
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
-              tagName: "span",
-              placeholder: "Food Price",
-              value: singleItem.price,
-              onChange: value => updateMenuItem(value, index, "price")
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
-              tagName: "p",
-              placeholder: "Food description",
-              value: singleItem.description,
-              onChange: value => updateMenuItem(value, index, "description")
-            }), singleItem.category && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
-              style: {
-                "padding": "5px 10px",
-                "backgroundColor": "#e5a21a",
-                "color": "#ffffff",
-                "display": "inline-block",
-                "fontSize": "12px",
-                "fontWeight": "bold",
-                "borderRadius": "5px",
-                "marginBottom": "5px"
-              },
-              children: singleItem.category
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
-              variant: "primary",
-              style: {
-                "marginBottom": "20px"
-              },
-              onClick: () => deleteMenuItem(index),
-              isDestructive: true,
-              children: "Remove the menu item"
-            })]
-          }, index);
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
-            variant: "primary",
-            style: {},
-            onClick: addMenuItem,
-            children: "Add Menu Item"
-          })
-        })]
-      })
-    });
-  },
-  save({
-    attributes
-  }) {
-    const {
-      menuItems
-    } = attributes;
-    const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save();
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-      ...blockProps,
-      className: "food-menu",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-        className: "food-menu__filter",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
-          "data-filter": "all",
-          children: "All"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
-          "data-filter": "grill",
-          children: "Grill"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
-          "data-filter": "pasta",
-          children: "Pasta"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
-          "data-filter": "pizza",
-          children: "Pizza"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
-          "data-filter": "salad",
-          children: "Salad"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
-          "data-filter": "desert",
-          children: "Desert"
-        })]
-      }), menuItems.map((singleItem, index) => {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-          className: "food-menu__item",
-          children: [singleItem.image && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-            className: "food-image",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
-              src: singleItem.image
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-            className: "food-menu__header",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
-              tagName: "h4",
-              value: singleItem.name
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
-              tagName: "span",
-              value: singleItem.price
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
-            tagName: "p",
-            value: singleItem.description
-          }), singleItem.category && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
-            className: `food-category`,
-            children: singleItem.category
-          })]
-        }, index);
-      })]
-    });
-  }
+  ..._block_json__WEBPACK_IMPORTED_MODULE_3__,
+  edit: _edit__WEBPACK_IMPORTED_MODULE_1__["default"],
+  save: _save__WEBPACK_IMPORTED_MODULE_2__["default"]
 });
 })();
 
