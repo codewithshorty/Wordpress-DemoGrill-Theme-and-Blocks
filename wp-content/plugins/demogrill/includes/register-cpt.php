@@ -18,6 +18,18 @@ function register_demogrill_menu_cpt()
         "menu_icon" => "dashicons-food",
         "menu_position" => 6
     ]);
+
+    register_post_type("reservation", [
+        "labels" => [
+            "name" => "Guest Reservations",
+            "singular_name" => "Guest Reservation"
+        ],
+        "public" => false,
+        "show_ui" => true,
+        "supports" => ["title"],
+        "menu_icon" => "dashicons-calendar",
+        "menu_position" => 7
+    ]);
 }
 
 // Registering Food Menu CPT

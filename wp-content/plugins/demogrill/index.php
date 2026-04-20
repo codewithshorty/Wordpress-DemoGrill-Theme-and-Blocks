@@ -23,7 +23,20 @@ define("DEMOGRILL_DIR", plugin_dir_path(__FILE__));
 // Includes
 include(DEMOGRILL_DIR . "includes/register-blocks.php");
 include(DEMOGRILL_DIR . "includes/register-cpt.php");
+include(DEMOGRILL_DIR . "includes/handle-form-reservation.php");
+include(DEMOGRILL_DIR . "includes/manage-table-columns.php");
+include(DEMOGRILL_DIR . "includes/register-post-route.php");
 
 
 // Hooks
 add_action("init", "demogrill_registering_block");
+
+add_action("wp_ajax_submit_reservation", "handle_reservation");
+add_action("wp_ajax_nopriv_submit_reservation", "handle_reservation");
+
+////
+add_filter("manage_reservation_posts_columns", "reservation_columns");
+add_action("manage_reservation_posts_custom_column", "reservation_column", 10, 2);
+
+/////
+add_action("rest_api_init", "register_reservation_route");
