@@ -1,0 +1,16 @@
+.reservation-button.loading {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.animate-spin {
+    width:30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100%{
+        transform: rotate(360deg);
+    }
+}

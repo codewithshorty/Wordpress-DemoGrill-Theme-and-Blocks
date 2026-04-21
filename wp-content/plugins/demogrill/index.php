@@ -26,6 +26,7 @@ include(DEMOGRILL_DIR . "includes/register-cpt.php");
 include(DEMOGRILL_DIR . "includes/handle-form-reservation.php");
 include(DEMOGRILL_DIR . "includes/manage-table-columns.php");
 include(DEMOGRILL_DIR . "includes/register-post-route.php");
+include(DEMOGRILL_DIR . "includes/nonce-rest.php");
 
 
 // Hooks
@@ -40,3 +41,6 @@ add_action("manage_reservation_posts_custom_column", "reservation_column", 10, 2
 
 /////
 add_action("rest_api_init", "register_reservation_route");
+
+/////
+add_action("wp_enqueue_scripts", "enqueue_demogrill_scripts");

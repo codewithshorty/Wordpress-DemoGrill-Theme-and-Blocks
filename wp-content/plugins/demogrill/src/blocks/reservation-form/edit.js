@@ -1,4 +1,5 @@
-import { useBlockProps } from "@wordpress/block-editor"
+import { useBlockProps } from "@wordpress/block-editor";
+import "./main.css"
 export default function Edit() {
     const blockProps = useBlockProps();
     return (
