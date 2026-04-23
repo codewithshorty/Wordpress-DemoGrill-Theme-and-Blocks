@@ -5,7 +5,7 @@
     "title": "DemoGrill Header Main",
     "icon": "cover-image",
     "description": "Main Header block in DemoGrill Project.",
-    "category":"media",
+    "category":"demogrill",
     "keywords": [ "header", "wide", "fancy" ],
     "version": "1",
     "textdomain": "demogrill",

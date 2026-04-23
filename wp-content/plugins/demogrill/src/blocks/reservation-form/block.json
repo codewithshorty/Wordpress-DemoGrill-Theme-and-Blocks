@@ -5,7 +5,7 @@
     "title": "DemoGrill Reservation Form.",
     "icon": "forms",
     "description": "Reservation Form block in DemoGrill Project.",
-    "category":"text",
+    "category":"demogrill",
     "keywords": [ "form", "reservation" ],
     "version": "1",
     "textdomain": "demogrill",

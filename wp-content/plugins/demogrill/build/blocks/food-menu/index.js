@@ -146,7 +146,7 @@ module.exports = window["wp"]["data"];
   \*****************************************/
 (module) {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"demogrill/food-menu","title":"DemoGrill Food Menu","icon":"food","description":"Food Menu block in DemoGrill Project.","category":"text","keywords":["menu","food"],"version":"1","textdomain":"demogrill","editorScript":"file:./index.js","viewScript":"file:/view.js","style":"file:./index.css","render":"file:./render-food-menu.php","attributes":{"menuItems":{"type":"array","default":[{"name":"Margherita","price":"5e","description":"Classic pizza with tomato and cheese","image":"","category":"grill"}]}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"demogrill/food-menu","title":"DemoGrill Food Menu","icon":"food","description":"Food Menu block in DemoGrill Project.","category":"demogrill","keywords":["menu","food"],"version":"1","textdomain":"demogrill","editorScript":"file:./index.js","viewScript":"file:/view.js","style":"file:./index.css","render":"file:./render-food-menu.php","attributes":{"menuItems":{"type":"array","default":[{"name":"Margherita","price":"5e","description":"Classic pizza with tomato and cheese","image":"","category":"grill"}]}}}');
 
 /***/ }
 

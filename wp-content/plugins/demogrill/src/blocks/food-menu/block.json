@@ -5,7 +5,7 @@
     "title": "DemoGrill Food Menu",
     "icon": "food",
     "description": "Food Menu block in DemoGrill Project.",
-    "category":"text",
+    "category":"demogrill",
     "keywords": [ "menu", "food"],
     "version": "1",
     "textdomain": "demogrill",

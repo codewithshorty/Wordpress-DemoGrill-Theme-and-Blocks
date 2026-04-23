@@ -27,6 +27,7 @@ include(DEMOGRILL_DIR . "includes/handle-form-reservation.php");
 include(DEMOGRILL_DIR . "includes/manage-table-columns.php");
 include(DEMOGRILL_DIR . "includes/register-post-route.php");
 include(DEMOGRILL_DIR . "includes/nonce-rest.php");
+include(DEMOGRILL_DIR . "includes/register-demogrill-category.php");
 
 
 // Hooks
@@ -44,3 +45,7 @@ add_action("rest_api_init", "register_reservation_route");
 
 /////
 add_action("wp_enqueue_scripts", "enqueue_demogrill_scripts");
+
+
+/////
+add_filter("block_categories_all", "register_demogrill_category", 6, 1);

@@ -70,7 +70,7 @@ module.exports = window["wp"]["i18n"];
   \*********************************************/
 (module) {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"demogrill/header-simple","title":"DemoGrill Header Simple","icon":"cover-image","description":"Simple Main Header block in DemoGrill Project.","category":"text","keywords":["header","wide","fancy"],"version":"1","textdomain":"demogrill","editorScript":"file:./index.js","style":"file:./index.css","attributes":{"content":{"type":"string","source":"html","selector":"h2"},"underline_color":{"type":"string","default":"#f2665c"}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"demogrill/header-simple","title":"DemoGrill Header Simple","icon":"cover-image","description":"Simple Main Header block in DemoGrill Project.","category":"demogrill","keywords":["header","wide","fancy"],"version":"1","textdomain":"demogrill","editorScript":"file:./index.js","style":"file:./index.css","attributes":{"content":{"type":"string","source":"html","selector":"h2"},"underline_color":{"type":"string","default":"#f2665c"}}}');
 
 /***/ }
 

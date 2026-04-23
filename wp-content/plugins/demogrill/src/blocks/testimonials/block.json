@@ -1,0 +1,14 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "demogrill/testimonials",
+    "title": "DemoGrill Testimonials block.",
+    "icon": "format-quote",
+    "description": "Testimonials block in DemoGrill Project.",
+    "category":"demogrill",
+    "keywords": [ "testimonials", "people" ],
+    "version": "1",
+    "textdomain": "demogrill",
+    "editorScript":"file:./index.js",
+    "style": "file:./index.css"
+}
