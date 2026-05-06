@@ -6,14 +6,15 @@ import Edit from "./edit";
 
 registerBlockType(metadata.name, {
     ...metadata,
-    attributes: {
+    "attributes": {
         "testimonials": {
             "type": "array",
-            "default": []
+            "default": [
+                { "name": "", "desc": "", "image": "" }
+            ]
         }
     },
     save: Save,
     edit: Edit
-
 }
 );

@@ -10,5 +10,6 @@
     "version": "1",
     "textdomain": "demogrill",
     "editorScript":"file:./index.js",
+    "script":"file:./view.js",
     "style": "file:./index.css"
-}
+   }

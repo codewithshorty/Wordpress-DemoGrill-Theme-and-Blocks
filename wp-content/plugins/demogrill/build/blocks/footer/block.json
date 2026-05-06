@@ -1,0 +1,59 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "demogrill/footer",
+  "title": "DemoGrill Footer block",
+  "icon": "info",
+  "description": "Footer block in DemoGrill Project.",
+  "category": "demogrill",
+  "keywords": [
+    "footer",
+    "socials"
+  ],
+  "version": "1",
+  "textdomain": "demogrill",
+  "editorScript": "file:./index.js",
+  "style": "file:./index.css",
+  "attributes": {
+    "copyright": {
+      "type": "string",
+      "default": "© Copyrigt DemoGrill 2026. All right resserved."
+    },
+    "facebook": {
+      "type": "string",
+      "default": "#"
+    },
+    "instagram": {
+      "type": "string",
+      "default": "#"
+    },
+    "twitter": {
+      "type": "string",
+      "default": "#"
+    },
+    "tiktok": {
+      "type": "string",
+      "default": "#"
+    },
+    "phone": {
+      "type": "string",
+      "default": "+381 60 123 4567"
+    },
+    "email": {
+      "type": "string",
+      "default": "info@demogrill.com"
+    },
+    "location": {
+      "type": "string",
+      "default": "Belgrade"
+    },
+    "hoursWeek": {
+      "type": "string",
+      "default": "09:00 - 23:00"
+    },
+    "hoursWeekend": {
+      "type": "string",
+      "default": "12:00 - 18:00"
+    }
+  }
+}

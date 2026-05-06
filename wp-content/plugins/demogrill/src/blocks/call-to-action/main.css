@@ -1,0 +1,12 @@
+.cta-button {
+    padding: 20px 40px;
+    text-decoration: none;
+    color: #000000;
+    background-color: #FFFFFF;
+    transition: all 0.3s ease-in-out;
+    margin-top: 30px;
+}
+
+.cta-button:hover {
+    transform: scale(1.1);
+}

@@ -28,6 +28,7 @@ include(DEMOGRILL_DIR . "includes/manage-table-columns.php");
 include(DEMOGRILL_DIR . "includes/register-post-route.php");
 include(DEMOGRILL_DIR . "includes/nonce-rest.php");
 include(DEMOGRILL_DIR . "includes/register-demogrill-category.php");
+include(DEMOGRILL_DIR . "includes/register-scripts.php");
 
 
 // Hooks
@@ -49,3 +50,6 @@ add_action("wp_enqueue_scripts", "enqueue_demogrill_scripts");
 
 /////
 add_filter("block_categories_all", "register_demogrill_category", 6, 1);
+
+/////
+add_action("wp_enqueue_scripts", "register_demogrill_stylesheets");
