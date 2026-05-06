@@ -1,15 +1,1 @@
-/*!****************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/blocks/call-to-action/main.css ***!
-  \****************************************************************************************************************************************************************************************/
-.cta-button {
-    padding: 20px 40px;
-    text-decoration: none;
-    color: #000000;
-    background-color: #FFFFFF;
-    transition: all 0.3s ease-in-out;
-    margin-top: 30px;
-}
-
-.cta-button:hover {
-    transform: scale(1.1);
-}
+.cta-button{background-color:#fff;color:#000;margin-top:30px;padding:20px 40px;text-decoration:none;transition:all .3s ease-in-out}.cta-button:hover{transform:scale(1.1)}

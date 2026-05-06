@@ -15,15 +15,14 @@
   "textdomain": "demogrill",
   "editorScript": "file:./index.js",
   "style": "file:./index.css",
+  "supports": {
+    "html": false
+  },
   "attributes": {
     "title": {
       "type": "string",
       "source": "html",
       "selector": "h1"
-    },
-    "titleSize": {
-      "type": "number",
-      "default": 48
     },
     "subtitle": {
       "type": "string",
@@ -35,23 +34,19 @@
     },
     "btnText": {
       "type": "string",
-      "default": "Click Button"
+      "default": "Click me"
     },
-    "buttonBgColor": {
+    "heroButtonUrl": {
       "type": "string",
-      "default": "#cc8f15"
-    },
-    "buttonTextColor": {
-      "type": "string",
-      "default": "#ffffff"
-    },
-    "buttonRadius": {
-      "type": "number",
-      "default": 5
+      "default": ""
     },
     "textColor": {
       "type": "string",
       "default": "#000000"
+    },
+    "titleSize": {
+      "type": "number",
+      "default": 48
     },
     "heroOverlay": {
       "type": "number",
@@ -59,15 +54,23 @@
     },
     "heroPadding": {
       "type": "number",
-      "default": "50"
+      "default": 80
     },
     "heroTextAlign": {
       "type": "string",
-      "default": "left"
+      "default": "center"
     },
-    "heroButtonUrl": {
+    "buttonBgColor": {
       "type": "string",
-      "default": ""
+      "default": "#f97316"
+    },
+    "buttonTextColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "buttonRadius": {
+      "type": "number",
+      "default": 6
     }
   }
 }

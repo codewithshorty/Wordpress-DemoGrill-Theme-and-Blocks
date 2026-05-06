@@ -5,37 +5,64 @@
     "title": "DemoGrill Header Main",
     "icon": "cover-image",
     "description": "Main Header block in DemoGrill Project.",
-    "category":"demogrill",
-    "keywords": [ "header", "wide", "fancy" ],
+    "category": "demogrill",
+    "keywords": [
+        "header",
+        "wide",
+        "fancy"
+    ],
     "version": "1",
     "textdomain": "demogrill",
-    "editorScript":"file:./index.js",
+    "editorScript": "file:./index.js",
     "style": "file:./index.css",
+    "supports": {
+        "html": false
+    },
     "attributes": {
-        "title":{
-            "type":"string",
+        "title": {
+            "type": "string",
             "source": "html",
             "selector": "h1"
         },
-        "titleSize":{
-            "type":"number",
-            "default": 48
-        },
-        "subtitle":{
-            "type":"string",
+        "subtitle": {
+            "type": "string",
             "source": "html",
             "selector": "h2"
         },
-        "headImg":{
+        "headImg": {
             "type": "string"
         },
-        "btnText":{
-            "type":"string",
-            "default": "Click Button"
+        "btnText": {
+            "type": "string",
+            "default": "Click me"
+        },
+        "heroButtonUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#000000"
+        },
+        "titleSize": {
+            "type": "number",
+            "default": 48
+        },
+        "heroOverlay": {
+            "type": "number",
+            "default": 0.3
+        },
+        "heroPadding": {
+            "type": "number",
+            "default": 80
+        },
+        "heroTextAlign": {
+            "type": "string",
+            "default": "center"
         },
         "buttonBgColor": {
             "type": "string",
-            "default": "#cc8f15"
+            "default": "#f97316"
         },
         "buttonTextColor": {
             "type": "string",
@@ -43,27 +70,7 @@
         },
         "buttonRadius": {
             "type": "number",
-            "default": 5
-        },
-        "textColor":{
-            "type":"string",
-            "default": "#000000"
-        },
-        "heroOverlay":{
-            "type":"number",
-            "default": 0.3
-        },
-        "heroPadding":{
-            "type":"number",
-            "default":"50"
-        },
-        "heroTextAlign":{
-            "type":"string",
-            "default":"left"
-        },
-        "heroButtonUrl":{
-            "type":"string",
-            "default":""
+            "default": 6
         }
     }
 }
