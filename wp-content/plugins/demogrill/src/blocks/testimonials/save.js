@@ -1,10 +1,12 @@
 import { useBlockProps } from "@wordpress/block-editor";
+import "./main.css";
+
 
 export default function Save({ attributes }) {
     const { testimonials = [] } = attributes;
 
     const blockProps = useBlockProps.save({
-        className: "swiper demogrillSwiper"
+        className: "swiper demogrillSwiper testimonial-container"
     });
 
     return (
@@ -19,6 +21,7 @@ export default function Save({ attributes }) {
                         )}
 
                         <h3 className="testimonial-name">{testimonial.name}</h3>
+                        <p className="p-custom p-left">&ldquo;</p>
                         <p className="testimonial-desc">{testimonial.desc}</p>
 
                     </div>
@@ -28,9 +31,6 @@ export default function Save({ attributes }) {
             <div className="swiper-button-next"></div>
             <div className="swiper-button-prev"></div>
             <div className="swiper-pagination"></div>
-
-
-
         </div>
     );
 }

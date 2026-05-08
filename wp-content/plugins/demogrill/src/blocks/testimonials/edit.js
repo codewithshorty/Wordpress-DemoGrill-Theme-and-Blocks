@@ -4,7 +4,7 @@ import "./main.css";
 
 export default function Edit({ attributes, setAttributes }) {
 
-    const blockProps = useBlockProps();
+    const blockProps = useBlockProps({ className: "testimonial-container" });
     const { testimonials = [] } = attributes;
 
     const addTestimonial = () => {
@@ -24,7 +24,7 @@ export default function Edit({ attributes, setAttributes }) {
     }
 
     return (
-        <div {...blockProps}>
+        <div {...blockProps} >
             <h3>Testimonials</h3>
             {
                 testimonials.map((testimonial, index) => {
