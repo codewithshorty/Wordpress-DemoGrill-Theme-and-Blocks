@@ -9,11 +9,25 @@ import {
     TextControl
 } from "@wordpress/components";
 
+import "./main.css";
+
 export default function Edit({ attributes, setAttributes }) {
 
-    const { copyright, facebook, instagram, twitter, tiktok, phone, email, location, hoursWeek, hoursWeekend } = attributes;
+    const {
+        copyright,
+        facebook,
+        instagram,
+        twitter,
+        tiktok,
+        phone,
+        email,
+        location,
+        hoursWeek,
+        hoursWeekend
+    } = attributes;
+
     const blockProps = useBlockProps({
-        className: "demogrill-footer"
+        className: "demogrill-footer text-black"
     });
 
     return (
@@ -48,7 +62,7 @@ export default function Edit({ attributes, setAttributes }) {
 
                 </PanelBody>
 
-                <PanelBody title="Contact details">
+                <PanelBody title="Contact Details">
 
                     <TextControl
                         label="Phone"
@@ -68,95 +82,143 @@ export default function Edit({ attributes, setAttributes }) {
                         onChange={(val) => setAttributes({ location: val })}
                     />
 
-
-
                 </PanelBody>
 
-                <PanelBody title="Working hours">
+                <PanelBody title="Working Hours">
 
                     <TextControl
-                        label="Phone"
+                        label="Week Days"
                         value={hoursWeek}
                         onChange={(val) => setAttributes({ hoursWeek: val })}
                     />
 
                     <TextControl
-                        label="Email"
+                        label="Weekend"
                         value={hoursWeekend}
                         onChange={(val) => setAttributes({ hoursWeekend: val })}
                     />
-
-
 
                 </PanelBody>
 
             </InspectorControls>
 
-            <div {...blockProps}>
+            <footer {...blockProps}>
 
-                <div className="footer-grid">
+                <div className="mx-auto max-w-7xl px-6 sm:px-8 py-20">
 
-                    {/* BRAND */}
-                    <div className="footer-col">
-                        <h3>DemoGrill</h3>
-                        <p>
-                            Premium grilled food, elegant atmosphere and unforgettable dining experience.
-                        </p>
-                    </div>
+                    {/* GRID */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
 
-                    <div className="footer-col">
-                        <h4>Contact</h4>
-                        <p>{phone}</p>
-                        <p>{email}</p>
-                        <p>{location}</p>
-                    </div>
+                        {/* BRAND */}
+                        <div>
 
-                    <div className="footer-col">
-                        <h4>Working Hours</h4>
-                        <p>Mon - Fri: {hoursWeek}</p>
-                        <p>Sat - Sun: {hoursWeekend}</p>
-                    </div>
+                            <h3 className="text-3xl font-bold text-orange-500">
+                                DemoGrill
+                            </h3>
 
-                    <div className="footer-col">
+                            <p className="mt-5 text-black/70 leading-relaxed">
+                                Premium grilled food, elegant atmosphere and unforgettable dining experience.
+                            </p>
 
-                        <div className="footer-socials">
+                        </div>
 
-                            <a href={facebook || "#"}>
-                                <span>FB</span>
-                            </a>
+                        {/* CONTACT */}
+                        <div>
 
-                            <a href={instagram || "#"}>
-                                <span>IG</span>
-                            </a>
+                            <h4 className="text-xl font-semibold text-orange-500 mb-5">
+                                Contact
+                            </h4>
 
-                            <a href={twitter || "#"}>
-                                <span>X</span>
-                            </a>
+                            <div className="space-y-3 text-black/70">
 
-                            <a href={tiktok || "#"}>
-                                <span>TT</span>
-                            </a>
+                                <p>{phone}</p>
+
+                                <p>{email}</p>
+
+                                <p>{location}</p>
+
+                            </div>
+
+                        </div>
+
+                        {/* HOURS */}
+                        <div>
+
+                            <h4 className="text-xl font-semibold text-orange-500 mb-5">
+                                Working Hours
+                            </h4>
+
+                            <div className="space-y-3 text-black/70">
+
+                                <p>Mon - Fri: {hoursWeek}</p>
+
+                                <p>Sat - Sun: {hoursWeekend}</p>
+
+                            </div>
+
+                        </div>
+
+                        {/* SOCIALS */}
+                        <div>
+
+                            <h4 className="text-xl font-semibold text-orange-500 mb-5">
+                                Socials
+                            </h4>
+
+                            <div className="flex items-center gap-4 flex-wrap">
+
+                                <a
+                                    href={facebook || "#"}
+                                    className="footer-social-link"
+                                >
+                                    FB
+                                </a>
+
+                                <a
+                                    href={instagram || "#"}
+                                    className="footer-social-link"
+                                >
+                                    IG
+                                </a>
+
+                                <a
+                                    href={twitter || "#"}
+                                    className="footer-social-link"
+                                >
+                                    X
+                                </a>
+
+                                <a
+                                    href={tiktok || "#"}
+                                    className="footer-social-link"
+                                >
+                                    TT
+                                </a>
+
+                            </div>
 
                         </div>
 
                     </div>
 
+                    {/* BOTTOM */}
+                    <div className="border-t border-black/10 mt-16 pt-8 text-center">
+
+                        <RichText
+                            tagName="p"
+                            className="text-black/50 text-sm"
+                            value={copyright}
+                            placeholder="Enter copyright..."
+                            onChange={(val) =>
+                                setAttributes({ copyright: val })
+                            }
+                        />
+
+                    </div>
 
                 </div>
-                <div className="footer-bottom">
 
-                    <RichText
-                        tagName="p"
-                        value={copyright}
-                        placeholder="Enter copyright..."
-                        onChange={(val) =>
-                            setAttributes({ copyright: val })
-                        }
-                    />
-
-                </div>
-
-            </div>
+            </footer>
         </>
     );
 }
